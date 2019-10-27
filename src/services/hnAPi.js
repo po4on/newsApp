@@ -9,3 +9,9 @@ export const getStoryIds = async () => {
 
     return result
 };
+
+export const getStory = async (storyId) => {
+    const result = await axios.get(`${storyUrl + storyId}.json`).then(({data}) => data);
+
+    return result
+};
